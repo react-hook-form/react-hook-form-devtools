@@ -9,9 +9,17 @@ import { PanelShadow } from './panelShadow';
 import { Button } from './styled';
 import { useStateMachine } from 'little-state-machine';
 import { setVisible } from './settingAction';
+import { Resizable } from 're-resizable';
+
+const DEFAULT_PANEL_WIDTH = 400;
+const SHADOW_OVERHANG = 7;
 
 export const DevToolUI = ({ control }: { control: Control }) => {
   const { state, action } = useStateMachine(setVisible);
+
+  const [panelWidth, setPanelWidth] = React.useState(
+    DEFAULT_PANEL_WIDTH + SHADOW_OVERHANG,
+  );
 
   return (
     <>
@@ -29,32 +37,54 @@ export const DevToolUI = ({ control }: { control: Control }) => {
           top: 0,
           right: 0,
           position: 'fixed',
-          transform: 'translateX(280px)',
+          transform: `translateX(${panelWidth}px)`,
           zIndex: 99999,
         }}
       >
-        <div
+        <Resizable
+          defaultSize={{ width: DEFAULT_PANEL_WIDTH, height: '' }}
+          onResizeStop={(_, __, ___, d) => setPanelWidth(panelWidth + d.width)}
+          enable={{
+            top: false,
+            right: false,
+            bottom: false,
+            left: true,
+            topRight: false,
+            bottomRight: false,
+            bottomLeft: false,
+            topLeft: false,
+          }}
+          minWidth={200}
           style={{
             position: 'fixed',
-            height: '100vh',
-            width: 250,
-            zIndex: 99999,
-            background: colors.buttonBlue,
-            top: 0,
             right: 0,
-            display: 'grid',
-            textAlign: 'left',
-            color: 'white',
-            fontSize: 14,
-            gridTemplateRows: '40px auto',
-            fontFamily:
-              "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
+            top: 0,
+            display: 'flex',
+            flexDirection: 'column',
           }}
         >
-          <Header setVisible={action} control={control} />
-          <Panel control={control} />
-        </div>
-        <PanelShadow visible={state.visible} />
+          <PanelShadow visible={state.visible} />
+
+          <div
+            style={{
+              height: '100vh',
+              zIndex: 99999,
+              background: colors.buttonBlue,
+              top: 0,
+              right: 0,
+              display: 'grid',
+              textAlign: 'left',
+              color: 'white',
+              fontSize: 14,
+              gridTemplateRows: '40px auto',
+              fontFamily:
+                "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
+            }}
+          >
+            <Header setVisible={action} control={control} />
+            <Panel control={control} />
+          </div>
+        </Resizable>
       </Animate>
 
       {!state.visible && (

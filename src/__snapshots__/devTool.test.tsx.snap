@@ -6,198 +6,190 @@ exports[`DevTool render correctly  1`] = `
     style="position: fixed; top: 0px; right: 0px; transform: translateX(0); z-index: 99999; transition: all 0.2s linear 0s;"
   >
     <div
-      style="position: fixed; height: 100vh; width: 250px; z-index: 99999; background: rgb(25, 29, 58); top: 0px; right: 0px; display: grid; text-align: left; color: white; font-size: 14px; grid-template-rows: 40px auto; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;"
+      style="position: fixed; user-select: auto; right: 0px; top: 0px; display: flex; flex-direction: column; width: 400px; min-width: 200px; box-sizing: border-box; flex-shrink: 0; height: 0px;"
     >
-      <header
-        style="display: flex; align-items: center; padding-left: 10px;"
-      >
-        <p
-          style="margin: 0px; padding: 0px; font-weight: 600; font-size: 14px; line-height: 22px;"
-        >
-          <span
-            style="transition: 0.5s all; color: rgb(236, 89, 144);"
-          >
-            ■
-          </span>
-           RHF DevTools
-        </p>
-        <button
-          class="css-2hkk94"
-          title="Close dev panel"
-          type="button"
-        >
-          ✕
-        </button>
-      </header>
       <div
-        style="display: grid; grid-template-rows: 56px auto; height: 100vh;"
+        style="position: absolute; top: 0px; left: 247px;"
       >
         <div
-          style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 28px 28px;"
+          style="transform: translateX(0); transition: all 0.1s linear 0.3s;"
         >
-          <button
-            class="css-1hixbz5"
-            style="border-right: 1px solid #0e101c; text-transform: none; font-size: 11px; line-height: 1;"
-            title="Update values and state the form"
-            type="button"
-          >
-            ♺ UPDATE
-          </button>
-          <button
-            class="css-1hixbz5"
-            style="border-right: 1px solid #0e101c; text-transform: none; font-size: 11px; line-height: 1;"
-            title="Toggle entire fields"
-            type="button"
-          >
-            [+] EXPAND
-          </button>
-          <input
-            class="css-1cgmc6n"
-            name="search"
-            placeholder="Filter name..."
-            style="display: inline-block; border-radius: 0; width: 100%; margin: 0px; padding: 5px 10px; appearance: none; font-size: 14px; border: 0px; color: white; grid-column-start: 1; grid-column-end: 4; background: black;"
-            type="search"
-          />
-        </div>
-        <div
-          style="overflow: auto;"
-        >
-          <section
-            style="border-bottom: 1px dashed #bf1650; margin: 0px;"
+          <div
+            style="position: relative;"
           >
             <div
-              style="opacity: 1; transition: all 0.3s ease-in 0s;"
-            >
-              <table
-                class="css-vv52sx"
-                style="padding: 10px 10px 10px; width: 100%; transition: .3s all; border-left: 2px solid #191d3a;"
-              >
-                <thead>
-                  <tr>
-                    <td
-                      style="width: 100px; line-height: 22px;"
-                      valign="top"
-                    >
-                      <button
-                        class="css-1hixbz5"
-                        style="border: 1px solid #516391; border-radius: 2px; padding: 3px 5px; display: inline-block; font-size: 10px; line-height: 12px; width: 20px; text-align: center; margin-right: 10px;"
-                        title="Toggle field table"
-                        type="button"
-                      >
-                        +
-                      </button>
-                      <button
-                        class="css-1hixbz5"
-                        style="border: 1px solid #516391; border-radius: 2px; padding: 3px 5px; display: inline-block; font-size: 10px; line-height: 12px; text-align: center; margin-right: 10px;"
-                        title="Scroll into view"
-                        type="button"
-                      >
-                        Native
-                      </button>
-                    </td>
-                    <td
-                      style="display: block; max-width: 100px;"
-                    >
-                      <p
-                        style="margin: 0px; padding: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 14px; line-height: 22px;"
-                        title="test"
-                      >
-                        test
-                      </p>
-                    </td>
-                  </tr>
-                </thead>
-              </table>
-            </div>
-          </section>
-          <section
-            style="border-bottom: 1px dashed #bf1650; margin: 0px;"
-          >
-            <div
-              style="opacity: 1; transition: all 0.3s ease-in 0.1s;"
-            >
-              <table
-                class="css-vv52sx"
-                style="padding: 10px 10px 10px; width: 100%; transition: .3s all; border-left: 2px solid #191d3a;"
-              >
-                <thead>
-                  <tr>
-                    <td
-                      style="width: 100px; line-height: 22px;"
-                      valign="top"
-                    >
-                      <button
-                        class="css-1hixbz5"
-                        style="border: 1px solid #516391; border-radius: 2px; padding: 3px 5px; display: inline-block; font-size: 10px; line-height: 12px; width: 20px; text-align: center; margin-right: 10px;"
-                        title="Toggle field table"
-                        type="button"
-                      >
-                        +
-                      </button>
-                      <button
-                        class="css-1hixbz5"
-                        style="border: 1px solid #516391; border-radius: 2px; padding: 3px 5px; display: inline-block; font-size: 10px; line-height: 12px; text-align: center; margin-right: 10px;"
-                        title="Scroll into view"
-                        type="button"
-                      >
-                        Native
-                      </button>
-                    </td>
-                    <td
-                      style="display: block; max-width: 100px;"
-                    >
-                      <p
-                        style="margin: 0px; padding: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 14px; line-height: 22px;"
-                        title="test2"
-                      >
-                        test2
-                      </p>
-                    </td>
-                  </tr>
-                </thead>
-              </table>
-            </div>
-          </section>
+              style="position: fixed; height: 100vh; width: 250px; z-index: 99998; background: black; top: 7px; right: 7px; box-shadow: rgba(15, 15, 29, 0.4) -3px 3px 6px 0px;"
+            />
+            <span
+              style="width: 0px; height: 0px; position: fixed; z-index: 99998; border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-right: 10px solid black; right: 247px; top: -3px;"
+            />
+            <span
+              style="width: 0px; height: 0px; position: fixed; z-index: 99998; border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-right: 10px solid #191d3a; right: 247px; top: 37px;"
+            />
+            <span
+              style="width: 10px; height: 21px; position: fixed; z-index: 99998; right: 247px; top: 47px; background: rgb(25, 29, 58);"
+            />
+            <span
+              style="width: 0px; height: 0px; position: fixed; z-index: 99998; border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-left: 10px solid #191d3a; right: 247px; top: 55px;"
+            />
+          </div>
         </div>
-        <div
-          style="align-self: end;"
+      </div>
+      <div
+        style="height: 100vh; z-index: 99999; background: rgb(25, 29, 58); top: 0px; right: 0px; display: grid; text-align: left; color: white; font-size: 14px; grid-template-rows: 40px auto; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;"
+      >
+        <header
+          style="display: flex; align-items: center; padding-left: 10px;"
         >
-          <button
-            class="css-1hixbz5"
-            style="margin: 0px; width: 100%; padding: 8px 10px; text-transform: none; font-size: 12px; line-height: 14px;"
-            title="Toggle form state panel"
-            type="button"
+          <p
+            style="margin: 0px; padding: 0px; font-weight: 600; font-size: 14px; line-height: 22px;"
           >
             <span
               style="transition: 0.5s all; color: rgb(236, 89, 144);"
             >
               ■
             </span>
-             Form State: ON
+             RHF DevTools
+          </p>
+          <button
+            class="css-2hkk94"
+            title="Close dev panel"
+            type="button"
+          >
+            ✕
           </button>
+        </header>
+        <div
+          style="display: grid; grid-template-rows: 56px auto; height: 100vh;"
+        >
+          <div
+            style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 28px 28px;"
+          >
+            <button
+              class="css-1hixbz5"
+              style="border-right: 1px solid #0e101c; text-transform: none; font-size: 11px; line-height: 1;"
+              title="Update values and state the form"
+              type="button"
+            >
+              ♺ UPDATE
+            </button>
+            <button
+              class="css-1hixbz5"
+              style="border-right: 1px solid #0e101c; text-transform: none; font-size: 11px; line-height: 1;"
+              title="Toggle entire fields"
+              type="button"
+            >
+              [+] EXPAND
+            </button>
+            <input
+              class="css-1cgmc6n"
+              name="search"
+              placeholder="Filter name..."
+              style="display: inline-block; border-radius: 0; width: 100%; margin: 0px; padding: 5px 10px; appearance: none; font-size: 14px; border: 0px; color: white; grid-column-start: 1; grid-column-end: 4; background: black;"
+              type="search"
+            />
+          </div>
+          <div
+            style="overflow: auto;"
+          >
+            <section
+              style="border-bottom: 1px dashed #bf1650; margin: 0px;"
+            >
+              <div
+                style="opacity: 1; transition: all 0.3s ease-in 0s;"
+              >
+                <div
+                  class="css-1d6xt5o"
+                >
+                  <div
+                    class="css-1o2m3ez"
+                  >
+                    <button
+                      class="css-1hixbz5"
+                      style="border: 1px solid #516391; border-radius: 2px; padding: 3px 5px; display: inline-block; font-size: 10px; line-height: 12px; width: 20px; text-align: center; margin-right: 10px;"
+                      title="Toggle field table"
+                      type="button"
+                    >
+                      +
+                    </button>
+                    <button
+                      class="css-1hixbz5"
+                      style="border: 1px solid #516391; border-radius: 2px; padding: 3px 5px; display: inline-block; font-size: 10px; line-height: 12px; text-align: center; margin-right: 10px;"
+                      title="Scroll into view"
+                      type="button"
+                    >
+                      Native
+                    </button>
+                  </div>
+                  <div
+                    class="css-k7v4nu"
+                  >
+                    test
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section
+              style="border-bottom: 1px dashed #bf1650; margin: 0px;"
+            >
+              <div
+                style="opacity: 1; transition: all 0.3s ease-in 0.1s;"
+              >
+                <div
+                  class="css-1d6xt5o"
+                >
+                  <div
+                    class="css-1o2m3ez"
+                  >
+                    <button
+                      class="css-1hixbz5"
+                      style="border: 1px solid #516391; border-radius: 2px; padding: 3px 5px; display: inline-block; font-size: 10px; line-height: 12px; width: 20px; text-align: center; margin-right: 10px;"
+                      title="Toggle field table"
+                      type="button"
+                    >
+                      +
+                    </button>
+                    <button
+                      class="css-1hixbz5"
+                      style="border: 1px solid #516391; border-radius: 2px; padding: 3px 5px; display: inline-block; font-size: 10px; line-height: 12px; text-align: center; margin-right: 10px;"
+                      title="Scroll into view"
+                      type="button"
+                    >
+                      Native
+                    </button>
+                  </div>
+                  <div
+                    class="css-k7v4nu"
+                  >
+                    test2
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div
+            style="align-self: end;"
+          >
+            <button
+              class="css-1hixbz5"
+              style="margin: 0px; width: 100%; padding: 8px 10px; text-transform: none; font-size: 12px; line-height: 14px;"
+              title="Toggle form state panel"
+              type="button"
+            >
+              <span
+                style="transition: 0.5s all; color: rgb(236, 89, 144);"
+              >
+                ■
+              </span>
+               Form State: ON
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-    <div
-      style="transform: translateX(0); transition: all 0.1s linear 0.3s;"
-    >
-      <div
-        style="position: relative;"
-      >
+      <div>
         <div
-          style="position: fixed; height: 100vh; width: 250px; z-index: 99998; background: black; top: 7px; right: 7px; box-shadow: rgba(15, 15, 29, 0.4) -3px 3px 6px 0px;"
-        />
-        <span
-          style="width: 0px; height: 0px; position: fixed; z-index: 99998; border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-right: 10px solid black; right: 247px; top: -3px;"
-        />
-        <span
-          style="width: 0px; height: 0px; position: fixed; z-index: 99998; border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-right: 10px solid #191d3a; right: 247px; top: 37px;"
-        />
-        <span
-          style="width: 10px; height: 21px; position: fixed; z-index: 99998; right: 247px; top: 47px; background: rgb(25, 29, 58);"
-        />
-        <span
-          style="width: 0px; height: 0px; position: fixed; z-index: 99998; border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-left: 10px solid #191d3a; right: 247px; top: 55px;"
+          class=""
+          style="position: absolute; user-select: none; width: 10px; height: 100%; top: 0px; left: -5px; cursor: col-resize;"
         />
       </div>
     </div>

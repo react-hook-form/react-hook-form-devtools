@@ -57,12 +57,40 @@ const Input = styled.input`
   }
 `;
 
-const Table = styled.table`
+const Table = styled.div<{ hasError?: boolean }>`
   transition: 0.3s all;
+  display: grid;
+  grid-template-columns: 120px 5fr;
+  grid-template-rows: auto;
+  row-gap: 2px;
+  padding: 4px;
 
   &:hover {
     background: ${colors.primary};
   }
+
+  ${({ hasError }) => `2px solid ${
+    hasError ? colors.secondary : colors.buttonBlue
+  };
+  
+  `}
+`;
+
+export const Label = styled.div<{ right?: boolean }>`
+  padding-right: 5px;
+
+  ${({ right }) =>
+    right &&
+    `
+  font-weight: 500;
+  text-align: right;
+  `}
+`;
+
+export const Value = styled.div`
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 `;
 
 export { Button, CircleButton, Input, Table };

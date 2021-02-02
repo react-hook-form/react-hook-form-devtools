@@ -4,7 +4,7 @@ import isUndefined from 'lodash/isUndefined';
 import isObject from 'lodash/isObject';
 import get from 'lodash/get';
 import colors from './colors';
-import { Button, Table, paraGraphDefaultStyle } from './styled';
+import { Button, Table, paraGraphDefaultStyle, Label, Value } from './styled';
 
 type Props = {
   isNative: boolean;
@@ -73,195 +73,114 @@ const PanelTable = ({
       easeType="ease-in"
       delay={index * 0.1}
     >
-      <Table
-        style={{
-          padding: '10px 10px 10px',
-          width: '100%',
-          transition: '.3s all',
-          borderLeft: `2px solid ${
-            hasError ? colors.secondary : colors.buttonBlue
-          }`,
-        }}
-      >
-        <thead>
-          <tr>
-            <td valign="top" style={{ width: 100, lineHeight: '22px' }}>
-              <Button
-                onClick={() => setCollapse(!collapse)}
-                title="Toggle field table"
-                style={{
-                  border: `1px solid ${colors.lightBlue}`,
-                  borderRadius: 2,
-                  padding: '3px 5px',
-                  display: 'inline-block',
-                  fontSize: 10,
-                  lineHeight: '12px',
-                  width: 20,
-                  textAlign: 'center',
-                  marginRight: 10,
-                }}
-              >
-                {collapse ? '+' : '-'}
-              </Button>
-              <Button
-                onClick={() => {
-                  if (refObject.scrollIntoView) {
-                    refObject.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
-                title="Scroll into view"
-                style={{
-                  border: `1px solid ${colors.lightBlue}`,
-                  borderRadius: 2,
-                  padding: '3px 5px',
-                  display: 'inline-block',
-                  fontSize: 10,
-                  lineHeight: '12px',
-                  textAlign: 'center',
-                  marginRight: 10,
-                  ...(isNative
-                    ? {}
-                    : { cursor: 'not-allowed', background: colors.lightBlue }),
-                }}
-              >
-                {isNative ? 'Native' : 'Custom'}
-              </Button>
-            </td>
-            <td
-              style={{
-                display: 'block',
-                maxWidth: 100,
-              }}
-            >
-              <p
-                style={{
-                  margin: 0,
-                  padding: 0,
-                  whiteSpace: 'nowrap',
-                  overflow: 'hidden',
-                  textOverflow: 'ellipsis',
-                  ...paraGraphDefaultStyle,
-                }}
-                title={name}
-              >
-                {name}
-              </p>
-            </td>
-          </tr>
-        </thead>
+      <Table hasError={hasError}>
+        <Label>
+          <Button
+            onClick={() => setCollapse(!collapse)}
+            title="Toggle field table"
+            style={{
+              border: `1px solid ${colors.lightBlue}`,
+              borderRadius: 2,
+              padding: '3px 5px',
+              display: 'inline-block',
+              fontSize: 10,
+              lineHeight: '12px',
+              width: 20,
+              textAlign: 'center',
+              marginRight: 10,
+            }}
+          >
+            {collapse ? '+' : '-'}
+          </Button>
+          <Button
+            onClick={() => {
+              if (refObject.scrollIntoView) {
+                refObject.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+            title="Scroll into view"
+            style={{
+              border: `1px solid ${colors.lightBlue}`,
+              borderRadius: 2,
+              padding: '3px 5px',
+              display: 'inline-block',
+              fontSize: 10,
+              lineHeight: '12px',
+              textAlign: 'center',
+              marginRight: 10,
+              ...(isNative
+                ? {}
+                : { cursor: 'not-allowed', background: colors.lightBlue }),
+            }}
+          >
+            {isNative ? 'Native' : 'Custom'}
+          </Button>
+        </Label>
+        <Value>{name}</Value>
         {!collapse && (
-          <tbody>
+          <>
             {type && (
-              <tr>
-                <td
-                  align="right"
-                  style={{
-                    paddingRight: 5,
-                    fontWeight: 500,
-                    verticalAlign: 'top',
-                    ...paraGraphDefaultStyle,
-                  }}
-                >
+              <>
+                <Label right style={paraGraphDefaultStyle}>
                   Type:
-                </td>
-                <td
+                </Label>
+                <Value
                   style={{
-                    display: 'block',
-                    maxWidth: 100,
                     ...paraGraphDefaultStyle,
                   }}
                 >
                   {type}
-                </td>
-              </tr>
+                </Value>
+              </>
             )}
             {errorType && (
-              <tr>
-                <td
-                  align="right"
-                  style={{
-                    paddingRight: 5,
-                    fontWeight: 500,
-                    verticalAlign: 'top',
-                    ...paraGraphDefaultStyle,
-                  }}
-                >
+              <>
+                <Label right style={paraGraphDefaultStyle}>
                   ERROR Type:
-                </td>
-                <td
-                  style={{
-                    display: 'block',
-                    maxWidth: 100,
-                    ...paraGraphDefaultStyle,
-                  }}
-                >
-                  {errorType}
-                </td>
-              </tr>
+                </Label>
+                <Value>{errorType}</Value>
+              </>
             )}
             {errorMessage && (
-              <tr>
-                <td
-                  align="right"
+              <>
+                <Label
                   style={{
-                    paddingRight: 5,
                     fontWeight: 500,
-                    verticalAlign: 'top',
                     ...paraGraphDefaultStyle,
                   }}
                 >
                   MESSAGE:
-                </td>
-                <td
+                </Label>
+                <Value
                   style={{
-                    display: 'block',
-                    maxWidth: 100,
                     ...paraGraphDefaultStyle,
                   }}
                 >
                   {errorMessage.trim()}
-                </td>
-              </tr>
+                </Value>
+              </>
             )}
             {!isUndefined(value) && (
-              <tr>
-                <td
-                  align="right"
-                  style={{
-                    paddingRight: 5,
-                    fontWeight: 500,
-                    verticalAlign: 'top',
-                    ...paraGraphDefaultStyle,
-                  }}
-                >
+              <>
+                <Label right style={paraGraphDefaultStyle}>
                   Value:
-                </td>
-                <td
+                </Label>
+                <Value
                   data-testid={`${name}-field-value`}
                   style={{
-                    display: 'block',
-                    maxWidth: 100,
                     ...paraGraphDefaultStyle,
                   }}
                 >
                   {value}
-                </td>
-              </tr>
+                </Value>
+              </>
             )}
             {readFormStateRef.current.touched && (
-              <tr>
-                <td
-                  align="right"
-                  style={{
-                    paddingRight: 5,
-                    fontWeight: 500,
-                    verticalAlign: 'top',
-                    ...paraGraphDefaultStyle,
-                  }}
-                >
+              <>
+                <Label right style={paraGraphDefaultStyle}>
                   Touched:
-                </td>
-                <td>
+                </Label>
+                <Value>
                   <code
                     style={{
                       color: isTouched ? colors.green : colors.lightPink,
@@ -271,23 +190,15 @@ const PanelTable = ({
                   >
                     {isTouched ? 'true' : 'false'}
                   </code>
-                </td>
-              </tr>
+                </Value>
+              </>
             )}
             {(readFormStateRef.current as any).dirtyFields && (
-              <tr>
-                <td
-                  align="right"
-                  style={{
-                    paddingRight: 5,
-                    fontWeight: 500,
-                    verticalAlign: 'top',
-                    ...paraGraphDefaultStyle,
-                  }}
-                >
+              <>
+                <Label right style={paraGraphDefaultStyle}>
                   Dirty:
-                </td>
-                <td>
+                </Label>
+                <Value>
                   <code
                     style={{
                       color: isDirty ? colors.green : colors.lightPink,
@@ -297,10 +208,10 @@ const PanelTable = ({
                   >
                     {isDirty ? 'true' : 'false'}
                   </code>
-                </td>
-              </tr>
+                </Value>
+              </>
             )}
-          </tbody>
+          </>
         )}
       </Table>
     </Animate>

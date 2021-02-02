@@ -4,8 +4,8 @@ import {
   createStore,
   setStorageType,
 } from 'little-state-machine';
-import { Control } from 'react-hook-form';
 import { DevToolUI } from './devToolUI';
+import { Control } from 'react-hook-form';
 
 if (typeof window !== 'undefined') {
   setStorageType(window.localStorage);

@@ -5,46 +5,35 @@ exports[`PanelTable should render collapsed 1`] = `
   <div
     style="opacity: 1; transition: all 0.3s ease-in 0s;"
   >
-    <table
-      class="css-vv52sx"
-      style="padding: 10px 10px 10px; width: 100%; transition: .3s all; border-left: 2px solid #bf1650;"
+    <div
+      class="css-35hooo"
     >
-      <thead>
-        <tr>
-          <td
-            style="width: 100px; line-height: 22px;"
-            valign="top"
-          >
-            <button
-              class="css-1hixbz5"
-              style="border: 1px solid #516391; border-radius: 2px; padding: 3px 5px; display: inline-block; font-size: 10px; line-height: 12px; width: 20px; text-align: center; margin-right: 10px;"
-              title="Toggle field table"
-              type="button"
-            >
-              +
-            </button>
-            <button
-              class="css-1hixbz5"
-              style="border: 1px solid #516391; border-radius: 2px; padding: 3px 5px; display: inline-block; font-size: 10px; line-height: 12px; text-align: center; margin-right: 10px; cursor: not-allowed; background: rgb(81, 99, 145);"
-              title="Scroll into view"
-              type="button"
-            >
-              Custom
-            </button>
-          </td>
-          <td
-            style="display: block; max-width: 100px;"
-          >
-            <p
-              style="margin: 0px; padding: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 14px; line-height: 22px;"
-              title="test"
-            >
-              test
-            </p>
-          </td>
-        </tr>
-      </thead>
-    </table>
+      <div
+        class="css-1o2m3ez"
+      >
+        <button
+          class="css-1hixbz5"
+          style="border: 1px solid #516391; border-radius: 2px; padding: 3px 5px; display: inline-block; font-size: 10px; line-height: 12px; width: 20px; text-align: center; margin-right: 10px;"
+          title="Toggle field table"
+          type="button"
+        >
+          +
+        </button>
+        <button
+          class="css-1hixbz5"
+          style="border: 1px solid #516391; border-radius: 2px; padding: 3px 5px; display: inline-block; font-size: 10px; line-height: 12px; text-align: center; margin-right: 10px; cursor: not-allowed; background: rgb(81, 99, 145);"
+          title="Scroll into view"
+          type="button"
+        >
+          Custom
+        </button>
+      </div>
+      <div
+        class="css-k7v4nu"
+      >
+        test
+      </div>
+    </div>
   </div>
 </DocumentFragment>
 `;
